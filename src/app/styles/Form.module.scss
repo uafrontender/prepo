@@ -1,0 +1,44 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 18px;
+  color: #333;
+}
+
+.input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+
+  &:read-only {
+    background: #eee;
+    cursor: not-allowed;
+  }
+}
+
+.transactionInfo {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e8f4e8;
+  border: 1px solid #b2d8b2;
+  border-radius: 4px;
+}
+
+.errorInfo {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  border-radius: 4px;
+}
