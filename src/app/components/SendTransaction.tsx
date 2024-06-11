@@ -56,8 +56,12 @@ export function SendTransaction() {
       </Button>
 
       {hash && <div className={styles.transactionInfo}>Transaction Hash: {hash}</div>}
-      {isConfirming && <div className={styles.transactionInfo}>Waiting for confirmation...</div>}
-      {isConfirmed && <div className={styles.transactionInfo}>Transaction confirmed.</div>}
+      {isConfirming && (
+        <div className={`${styles.transactionInfo} ${styles.confirming}`}>Waiting for confirmation...</div>
+      )}
+      {isConfirmed && (
+        <div className={`${styles.transactionInfo} ${styles.confirmed}`}>Transaction confirmed.</div>
+      )}
       {error && (
         <div className={styles.errorInfo}>Error: {(error as BaseError).shortMessage || error.message}</div>
       )}
